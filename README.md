@@ -9,6 +9,7 @@ Problem list in the demo
 ===============
 
 **Linear**:
+
 For a linear model, two kinds of constraints are employed to fix the unknown scale of model. (Linear regression and Unit Norm constriant) Hence, you can choose "GoIA-LR" and "GoIA-UN" to slove the linear problem. 
 1. Synthetic linear model. 
 2. Plane fitting.
@@ -16,6 +17,7 @@ For a linear model, two kinds of constraints are employed to fix the unknown sca
 4. Decomposed homography estimation.
 
 **Nonlinear**: 
+
 5. Affine registration. 
 6. Triangulation. 
  

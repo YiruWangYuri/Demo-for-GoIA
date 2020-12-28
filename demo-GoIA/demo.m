@@ -16,13 +16,13 @@
 
 %   Linear problem 
 %   Synthetic-N-Outlier-TimeLimit-Dim --- GoIA-LR, GoIA-UN
-%   PlaneFitting                                      --- GoIA-LR, GoIA-UN
-%   TranslationEstimation                       --- GoIA-LR, GoIA-UN
-%   HomoLinear                                     --- GoIA-UN
+%   PlaneFitting  --- GoIA-LR, GoIA-UN
+%   TranslationEstimation --- GoIA-LR, GoIA-UN
+%   HomoLinear --- GoIA-UN
 
 %   Non-linear problem
-%   Triangulation                                    --- GoIA
-%   AffineRegistration                             --- GoIA
+%   Triangulation --- GoIA
+%   AffineRegistration --- GoIA
 
     problemList = {'Synthetic-N-Outlier-TimeLimit-Dim', 'PlaneFitting', 'TranslationEstimation',...
                              'Triangulation', 'AffineRegistration',...
@@ -30,7 +30,7 @@
     methodList = {'GoIA-LR', 'GoIA-UN', 'GoIA'};
                          
     selectedProblem = 1; 
-    selectedMethod = [1, 2];
+    selectedMethod = 1;
 
 %   You can set the timeLimit to avoid extremely long runtime in each run. 
 %   Please notice that the method would not guarantee the global optimality,

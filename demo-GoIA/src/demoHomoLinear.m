@@ -40,6 +40,10 @@ function [RESULT] = demoHomoLinear(Data, epsilonPixel, timeLimit, selectedMethod
 
         h11 = solution1(1); h12 = solution1(2); h13 = solution1(3); 
         h21 = solution1(4); h22 = solution1(5); h23 = solution1(6);
+        if (size(data_Pt, 1) == 4)
+            N = size(data_Pt, 2);
+            data_Pt = [data_Pt(1:2,:); ones(1, N); data_Pt(3:4,:); ones(1, N)];
+        end
         tempdata = data_Pt(:, ~outindex1);
         data2 = ones(4, CS1);
         for ind = 1 : CS1

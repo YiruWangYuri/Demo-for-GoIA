@@ -55,10 +55,10 @@ function [RESULT] = demoHomoLinear(Data, epsilonPixel, timeLimit, selectedMethod
         else
             runtime2 = 0; 
             solution2 = inf(dim2 + 1, 1);
-            CS2 = 0;
+            CS2 = CS1;
             flagofGlobal2 = false;
             iter2 = 0;
-            outindex2 = true(1, CS1);
+            outindex2 = false(1, CS1);
         end
         h31 = -solution2(1)/solution2(4); h32 = -solution2(2)/solution2(4); h33 = -solution2(3)/solution2(4);
         H_GoIA = [h11, h12, h13;

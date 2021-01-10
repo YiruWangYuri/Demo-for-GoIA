@@ -36,7 +36,7 @@ function [RESULT] = demoHomoLinear(Data, epsilonPixel, timeLimit, selectedMethod
 
         %H-->3D: eq.(24)        
         solInit2 = rand(dim2 + 1, 1);                
-        timeLimit = timeLimit - runtime1;
+        timeLimit0 = timeLimit - runtime1;
 
         h11 = solution1(1); h12 = solution1(2); h13 = solution1(3); 
         h21 = solution1(4); h22 = solution1(5); h23 = solution1(6);
@@ -50,8 +50,8 @@ function [RESULT] = demoHomoLinear(Data, epsilonPixel, timeLimit, selectedMethod
             end           
         end    
                     
-        if (timeLimit > 0)
-            [runtime2, solution2, CS2, flagofGlobal2, iter2, outindex2] = SloveLinearProm(currentMethod, data2, dim2, solInit2, epsilonPixel*data_T1(1), timeLimit, gap);           
+        if (timeLimit0 > 0)
+            [runtime2, solution2, CS2, flagofGlobal2, iter2, outindex2] = SloveLinearProm(currentMethod, data2, dim2, solInit2, epsilonPixel*data_T1(1), timeLimit0, gap);           
         else
             runtime2 = 0; 
             solution2 = inf(dim2 + 1, 1);

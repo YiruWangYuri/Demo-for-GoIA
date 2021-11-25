@@ -29,9 +29,9 @@ function [RESULT] = demoLinearSynth(N, OutlierRatio, Dim, Repeats, noise_in, noi
                 end       
                 %epsilon
                 if strcmp(currentMethod, 'GoIA-UN') 
-                    epsilon = 1.5*noise_in;
+                    epsilon = 2.5*noise_in;
                 else
-                    epsilon = 3*noise_in;
+                    epsilon = 5*noise_in;
                 end
                 %gap  
                 gap = 0; %the relative gap between Upper and Lower bound               

@@ -51,7 +51,7 @@
         Dim = 3; % dimensionality of linear model
         Repeats = 50; % times of randomly generated data 
         noise_in = 0.01; % noise varience of inliers
-        noise_out = 1.5; % noise varience of outliers
+        noise_out = 2; % noise varience of outliers
         RESULT = demoLinearSynth(N, OutlierRatio, Dim, Repeats, noise_in, noise_out, timeLimit, selectedMethod, methodList);
     
     elseif strcmp(currentProblem, 'PlaneFitting')
